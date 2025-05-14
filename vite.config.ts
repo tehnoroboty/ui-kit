@@ -8,11 +8,12 @@ import { dependencies, devDependencies } from './package.json'
 
 export default defineConfig({
   build: {
+    cssCodeSplit: true,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      fileName: 'ui_kit',
+      fileName: 'index',
       formats: ['es'],
-      name: 'ui_kit',
+      name: 'ui-kit',
     },
     rollupOptions: {
       external: [
@@ -20,6 +21,16 @@ export default defineConfig({
         ...Object.keys(dependencies),
         ...Object.keys(devDependencies),
       ],
+      output: {
+        // Важно: так стили попадут в отдельный CSS
+        assetFileNames: assetInfo => {
+          if (assetInfo.name === 'index.css') {
+            return 'style.css'
+          }
+
+          return assetInfo.name!
+        },
+      },
     },
     sourcemap: true,
     target: 'esnext',

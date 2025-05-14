@@ -10,6 +10,7 @@
     "dist",
     "dist/style.css"
   ],
+  "style": "dist/style.css",
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "vite build && tsc",
