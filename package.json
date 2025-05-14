@@ -3,12 +3,12 @@
   "private": false,
   "version": "0.0.4",
   "type": "module",
-  "main": "dist/ui_kit.js",
-  "module": "dist/ui_kit.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "dist/ui_kit.css"
+    "dist/style.css"
   ],
   "scripts": {
     "dev": "storybook dev -p 6006",
