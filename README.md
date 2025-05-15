@@ -9,9 +9,10 @@ import '@tehnoroboty/ui-kit/dist/index.css'
 
 Для проекта ui-kit:
 1. Вносим изменения после чего push-им на github и после этого меняем версию
-2. Сменить версию:
+2. Сменить версию(v0.0.7):
 npm version patch
-
+3. push-им на github
+4. Файл сам сбилдиться и запишется на npm
 
 - Clone template: (replace `my-lib` with your project name)
   ```bash
