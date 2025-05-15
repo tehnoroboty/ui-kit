@@ -21,16 +21,6 @@ export default defineConfig({
         ...Object.keys(dependencies),
         ...Object.keys(devDependencies),
       ],
-      output: {
-        // Важно: так стили попадут в отдельный CSS
-        assetFileNames: assetInfo => {
-          if (assetInfo.name === 'index.css') {
-            return 'style.css'
-          }
-
-          return assetInfo.name!
-        },
-      },
     },
     sourcemap: true,
     target: 'esnext',
