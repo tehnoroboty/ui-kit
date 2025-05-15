@@ -25,4 +25,9 @@ export default defineConfig({
     sourcemap: true,
     target: 'esnext',
   },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'), // ✅ Добавляем алиас @ -> src
+    },
+  },
 })
