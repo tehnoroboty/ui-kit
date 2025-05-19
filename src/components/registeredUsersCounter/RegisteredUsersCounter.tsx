@@ -1,5 +1,3 @@
-'use client'
-
 import { Typography } from '@/components'
 
 import s from './registeredUsersCounter.module.scss'

@@ -5,8 +5,20 @@ const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(ts|tsx)'],
   addons: [
     getAbsolutePath('@storybook/addon-links'),
-    getAbsolutePath('@storybook/addon-interactions'),
     getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('@storybook/addon-interactions'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    {
+      name: getAbsolutePath('@storybook/addon-storysource'),
+      options: {
+        rule: {
+          include: [join(__dirname, '../src')],
+        },
+        loaderOptions: {
+          parser: 'typescript',
+        },
+      },
+    },
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),

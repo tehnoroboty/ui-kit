@@ -1,4 +1,3 @@
-'use client'
 import { ChangeEvent, ComponentProps, forwardRef, useEffect, useState } from 'react'
 
 import { TextArea } from '@/components'

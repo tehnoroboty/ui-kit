@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { action } from '@storybook/addon-actions'
+
 import { Button } from './Button'
 
 /**
@@ -28,11 +30,12 @@ import { Button } from './Button'
  */
 
 const meta = {
-  argTypes: {
-    variant: {
-      control: { type: 'radio' },
-      options: ['primary', 'secondary', 'bordered', 'transparent'],
-    },
+  args: {
+    children: 'Button',
+    disabled: false,
+    fullWidth: false,
+    onClick: action('on-click'),
+    variant: 'primary',
   },
   component: Button,
   tags: ['autodocs'],
@@ -42,34 +45,28 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const Primary: Story = {}
+
+export const Disabled: Story = {
   args: {
-    children: 'Button',
-    disabled: false,
-    variant: 'primary',
+    disabled: true,
   },
 }
 
 export const Secondary: Story = {
   args: {
-    children: 'Button ',
-    disabled: false,
     variant: 'secondary',
   },
 }
 
 export const BorderedButton: Story = {
   args: {
-    children: 'Button ',
-    disabled: false,
     variant: 'bordered',
   },
 }
 
 export const TransparentButton: Story = {
   args: {
-    children: 'Button ',
-    disabled: false,
     variant: 'transparent',
   },
 }
@@ -86,8 +83,6 @@ export const AsLink: Story = {
 export const FullWidth: Story = {
   args: {
     children: 'Full Width Primary Button',
-    disabled: false,
     fullWidth: true,
-    variant: 'primary',
   },
 }
