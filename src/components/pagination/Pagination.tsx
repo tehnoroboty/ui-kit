@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 import { Button, Typography } from '@/components'
-import { SelectBox } from '@/components/select/SelectBox'
+import { Options, SelectBox } from '@/components/select/SelectBox'
 import { PAGE_SIZE_OPTIONS } from '@/lib/constants/pagination'
 import clsx from 'clsx'
 
@@ -29,6 +29,10 @@ type PaginationProps = {
    * */
   pageSize: number
   /**
+   * list of options that will be rendered in a dropdown box instead of default ones
+   * */
+  pageSizeOptions?: Options[]
+  /**
    * represents the min number of page buttons to be shown on each side of the current page button. Defaults to 1.*/
   siblingCount?: number
   /**
@@ -44,6 +48,7 @@ export const Pagination = (props: PaginationProps) => {
     onPageChange,
     onPageSizeChange,
     pageSize,
+    pageSizeOptions = PAGE_SIZE_OPTIONS,
     siblingCount = 1,
     totalCount,
   } = props
@@ -143,7 +148,7 @@ export const Pagination = (props: PaginationProps) => {
           className={s.select}
           isPagination
           onChangeValue={handlePageSizeChange}
-          options={PAGE_SIZE_OPTIONS}
+          options={pageSizeOptions}
         />
         <Typography>on page</Typography>
       </div>

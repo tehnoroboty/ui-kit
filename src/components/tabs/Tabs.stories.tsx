@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Typography } from '@/components'
+import { mockTabs } from '@/components/tabs/mockData'
 
 import s from './tabs.module.scss'
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './Tabs'
-import { mockTabs } from '@/components/tabs/mockData'
 
 const meta = {
   component: Tabs,
@@ -45,7 +45,7 @@ export const Disabled: Story = {
       <Tabs className={s.tabs} defaultValue={mockTabs[0].value}>
         <TabsList loop>
           {mockTabs.map(tab => (
-            <TabsTrigger disabled={true} key={tab.value} value={tab.value}>
+            <TabsTrigger disabled key={tab.value} value={tab.value}>
               {tab.title}
             </TabsTrigger>
           ))}

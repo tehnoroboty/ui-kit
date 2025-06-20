@@ -48,14 +48,14 @@ export const Posts = ({ onPostClick, posts, renderEmptyImagePlaceholder }: Props
           {post.images.length > 0 ? (
             <Carousel list={post.images} renderItem={renderImgCarousel} size={'large'} />
           ) : (
-            renderEmptyImagePlaceholder?.() ?? (
+            (renderEmptyImagePlaceholder?.() ?? (
               <div className={s.notFound}>
                 <ImageNotFound height={194} width={199} />
                 <div>
                   <b>No Image</b>
                 </div>
               </div>
-            )
+            ))
           )}
         </div>
       ))}

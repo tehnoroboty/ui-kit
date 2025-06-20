@@ -27,6 +27,15 @@ const mockPaginationProps = {
   totalCount: 100,
 }
 
+const mockSizeOptions = [
+  { value: '8', valueTitle: '8' },
+  { value: '10', valueTitle: '10' },
+  { value: '20', valueTitle: '20' },
+  { value: '30', valueTitle: '30' },
+  { value: '50', valueTitle: '50' },
+  { value: '100', valueTitle: '100' },
+]
+
 export const InteractiveDemo: Story = {
   args: { ...mockPaginationProps },
   render: args => {
@@ -58,6 +67,23 @@ export const WithCustomSiblingCount: Story = {
     return (
       <div>
         <Typography>With 2 sibling pages visible</Typography>
+        <Pagination {...args} />
+      </div>
+    )
+  },
+}
+
+export const WithCustomOptions: Story = {
+  args: {
+    ...mockPaginationProps,
+    currentPage: 5,
+    pageSizeOptions: mockSizeOptions,
+    siblingCount: 2,
+  },
+  render: args => {
+    return (
+      <div>
+        <Typography>With custom options</Typography>
         <Pagination {...args} />
       </div>
     )

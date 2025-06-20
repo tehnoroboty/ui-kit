@@ -24,7 +24,7 @@ export const RadioBtn = forwardRef<ElementRef<'input'>, Props>(
           type={'radio'}
           {...rest}
         />
-        {/* eslint-disable-next-line react/jsx-no-undef */}
+        {}
         <Typography as={'label'} className={s.label} htmlFor={id} option={'bold_text14'}>
           {label}
         </Typography>

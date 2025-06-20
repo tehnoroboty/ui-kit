@@ -25,7 +25,6 @@ export const CheckBox = forwardRef<ElementRef<'input'>, Props>(
           {...rest}
         />
         {label && (
-          // eslint-disable-next-line react/jsx-no-undef
           <Typography as={'label'} className={clsx(s.label, labelProps?.className)} htmlFor={id}>
             {label}
           </Typography>

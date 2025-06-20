@@ -41,7 +41,7 @@ export const IsDisabled: Story = {
   },
 }
 
-export const isPagination: Story = {
+export const IsPagination: Story = {
   args: {
     isPagination: true,
     options: [

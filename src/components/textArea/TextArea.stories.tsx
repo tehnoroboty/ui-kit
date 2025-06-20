@@ -30,7 +30,7 @@ export const Error: Story = {
   },
 }
 
-export const maxValue: Story = {
+export const MaxValue: Story = {
   render: args => {
     const [text, setText] = useState('')
     const [error, setError] = useState<string>()
