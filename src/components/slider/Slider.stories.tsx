@@ -14,7 +14,7 @@ export default {
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react'
 
-import { PropsSlider, SliderComponent } from './slider'
+import { PropsSlider, SliderComponent } from './Slider'
 
 const meta: Meta<PropsSlider> = {
   argTypes: {

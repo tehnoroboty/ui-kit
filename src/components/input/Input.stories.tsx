@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from 'react'
 
 import { Meta, StoryObj } from '@storybook/react'
 
-import s from './Input.module.scss'
+import s from './input.module.scss'
 
 import { Input, InputProps } from './Input'
 

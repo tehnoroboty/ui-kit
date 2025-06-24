@@ -1,7 +1,7 @@
 import ExpandOutline from '@/assets/componentsIcons/ExpandOutline'
 import { Meta, StoryObj } from '@storybook/react'
 
-import s from './Popover.module.scss'
+import s from './popover.module.scss'
 
 import { PopoverComponent } from './Popover' // Предположим,
 

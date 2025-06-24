@@ -7,7 +7,7 @@ import Search from '@/assets/componentsIcons/SearchOutline'
 import { Typography } from '@/components'
 import clsx from 'clsx'
 
-import s from './Input.module.scss'
+import s from './input.module.scss'
 
 export type InputProps = {
   error?: string

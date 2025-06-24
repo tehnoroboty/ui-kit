@@ -8,7 +8,7 @@ import { SelectItem } from '@/components/select/SelectItem'
 import * as Select from '@radix-ui/react-select'
 import clsx from 'clsx'
 
-import styles from '@/components/select/Select.module.scss'
+import styles from '@/components/select/select.module.scss'
 
 type Props = ComponentPropsWithoutRef<'button'>
 /** Ui kit SelectLanguage component */

@@ -2,7 +2,7 @@ import { ReactNode, useState } from 'react'
 
 import * as Popover from '@radix-ui/react-popover'
 
-import s from './Popover.module.scss'
+import s from './popover.module.scss'
 
 type Props = {
   align?: 'center' | 'end' | 'start'
