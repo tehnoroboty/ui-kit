@@ -1,16 +1,20 @@
 # Usage:
 
 Использование библиотеки в проекте:
-1. Нужно установить библиотеку в проект: 
-pnpm i @tehnoroboty/ui-kit
 
-2. Прописать в главный файл проекта, где будет использоваться: 
-import '@tehnoroboty/ui-kit/dist/index.css'
+1. Нужно установить библиотеку в проект:
+   pnpm i @tehnoroboty/ui-kit
+2. Чтобы обновить зависимость @tehnoroboty/ui-kit до версии 0.0.15 в проекте, использующем pnpm, выполни следующую
+   команду в терминале:
+   pnpm add @tehnoroboty/ui-kit@0.0.15
+3. Прописать в главный файл проекта, где будет использоваться:
+   import '@tehnoroboty/ui-kit/dist/index.css'
 
 Для проекта ui-kit:
+
 1. Вносим изменения после чего push-им на github и после этого меняем версию
 2. Сменить версию(v0.0.7):
-npm version patch
+   npm version patch
 3. push-им на github
 4. Файл сам сбилдиться и запишется на npm
 
